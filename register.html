@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body  class="container-fluid" style="background-image: linear-gradient(to bottom, rgba(255, 153, 0, 0.2), rgba(255, 165,0,1.5)); height:900px; width:500px;">
+
+<div>
+    <img src="kar.jpg.jpg"  class="img-fluid"  style="width: 150px; height:150px;  position: relative; bottom:-20px; left:120px; border-radius:100px;">
+</div>
+<br>
+<br>
+<div class="card" style="width: 400px; height:700px;">
+
+    <!-- Card body -->
+    <div class="card-body">
+  
+      <!-- Material form register -->
+      <form>
+        <h2 class="h4 text-center py-4 font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >Create Account</h2>
+  
+        <!-- Material input text -->
+  
+
+        <div class="md-form">
+          <label for="materialFormCardNameEx" class="font-weight-light" >Username</label>
+          <input type="text" id="name" name="name" class="form-control" onblur="validatestring(this.id)" > 
+          
+        <br>
+  
+        <!-- Material input email -->
+        <div class="md-form">
+          
+          <label for="materialFormCardEmailEx" class="font-weight-light">Email</label>
+          <input type="email" id="email" class="form-control" name="email" onblur="validatemail(this.id)" autocomplete="off">
+          
+        </div>
+        <br>
+  
+        <!-- Material input email -->
+        <div class="md-form">
+            <label  class="font-weight-light">Phone Number</label>
+          <input type="text" id="mobile"  name="mobile" class="form-control" autocomplete="off" max="10" onblur="validatenumber(this.id)" >
+          
+        </div>
+  <br>
+        <!-- Material input password -->
+        <div class="md-form">
+            <label for="materialFormCardPasswordEx" class="font-weight-light">Password</label>
+          <input type="password" id="materialFormCardPasswordEx" class="form-control">
+          
+        </div>
+     
+        <div class="text-center py-4 mt-3">
+          <button class="btn btn-cyan" type="submit" style="background-color:orange;">Register</button>
+        </div>
+        <div>
+            <h6 style="text-align: center; ">login using social media</h6> 
+   <img src="google.jpg"  onclick = "Redirectg()" style="width: 50px; height:50px; position:relative; left:90px;">
+    <img src="facebookjpg.png_225" onclick = "Redirectf()" style="width: 50px; height:50px; position:relative; left:150px;">
+        </div>
+        <br>
+                             <h6 style="text-align: center;">Already have an account? <a href="login.html" style="color:orange;">Login</a>
+      </form>
+      <!-- Material form register -->
+  
+    </div>
+    <!-- Card body -->
+  
+  </div>
+  <!-- Card -->
+<script>
+    function validatestring(id){
+        var element = document.getElementById(id);
+        var regExp = /^[a-zA-Z ]+$/;
+        if(!regExp.test(element.value)){
+            alert("enter string value");
+            element.style.border="2px solid red";
+            return false;
+        }
+        element.style.border = "2px solid green";
+    }
+
+    function validatenumber(id){
+        var element = document.getElementById(id);
+        var regExp = /^[0-9 ]{10}$/;
+        if(!regExp.test(element.value)){
+            alert("enter number value and it should 10-digit number");
+            element.style.border="2px solid red";
+            return false;
+        }
+        element.style.border = "2px solid green";
+    }
+
+    function validatemail(id){
+        var element = document.getElementById(id);
+        var regExp = /^[a-zA-Z0-9._]+@[a-zA-Z0-9._]+\.[a-zA-Z]{2,4}$/;
+        if(!regExp.test(element.value)){
+            alert("enter valid email");
+            element.style.border="2px solid red";
+            return false;
+        }
+        element.style.border = "2px solid green";
+    }
+    function Redirectg() {
+        window.location = "https://www.gmail.com/";
+     function Redirectf() {
+        window.location = "https://www.facebook.com/";
+     }
+</script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>      
+</body>
+</html>
